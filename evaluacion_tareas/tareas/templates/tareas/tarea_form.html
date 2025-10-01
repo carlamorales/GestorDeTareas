@@ -1,0 +1,6 @@
+<h1>{{ view.object|default:"Nueva Tarea" }}</h1>
+<form method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'tareas:tarea_list' %}">Cancelar</a>
